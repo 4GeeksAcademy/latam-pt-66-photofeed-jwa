@@ -1,0 +1,254 @@
+<!DOCTYPE html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Instagram Photo Feed con Bootstrap</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg">
+      <div class="container">
+        <i class="fa-brands fa-instagram instagram-logo"></i>
+        <a class="instagram-name" href="#">Instagram</a>
+        <div class="btns-rigth">
+          <button
+            class="btn btn-sm btn-success"
+            data-bs-toggle="modal"
+            data-bs-target="#createModal"
+          >
+            <i class="fas"></i>+ Create new post
+          </button>
+          <div class="btn-group">
+            <button
+              type="button"
+              class="btn btn-sm btn-secondary dropdown-toggle"
+              data-bs-toggle="dropdown"
+            >
+              <i class="fas fa-cog"></i>
+            </button>
+            <ul class="dropdown-menu">
+              <li><a class="dropdown-item" href="#">Profile</a></li>
+              <li><a class="dropdown-item" href="#">Accessibility</a></li>
+              <li><a class="dropdown-item" href="#">Privacy and Data</a></li>
+              <li><hr class="dropdown-divider" /></li>
+              <li><a class="dropdown-item text-danger" href="#">Log out</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </nav>
+
+    <!-- Tabs -->
+    <ul class="nav nav-tabs" id="feedTabs" ">
+      <li class="nav-item">
+        <button
+          class="nav-link"
+          id="grid-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#grid"
+          type="button"
+        >
+          <i class="fas fa-th"></i>
+        </button>
+      </li>
+      <li class="nav-item">
+        <button
+          class="nav-link"
+          id="list-tab"
+          data-bs-toggle="tab"
+          data-bs-target="#list"
+          type="button"
+        >
+          <i class="fas fa-list"></i>
+        </button>
+      </li>
+    </ul>
+
+    <div class="tab-content" id="feedTabContent">
+      <!-- Grid View -->
+      <div class="tab-pane fade show active" id="grid"">
+        <div class="post-grid">
+          <div class="post-item">
+            <img
+              src="https://4geeksacademy.com/images/4geeks-main.jpg"
+              alt="Post 1"
+            />
+          </div>
+          <div class="post-item">
+            <img
+              src="https://storage.googleapis.com/media-breathecode/ea4fd897823186161355bdfce8b2d4f443a1effdc17d84c7b00c14e3de85c5aa"
+              alt="Post 2"
+            />
+          </div>
+          <div class="post-item">
+            <img
+              src="https://4geeksacademy.com/static/e87935aadbb3844e3734315214b5f032/f6992/madrid-3.png"
+              alt="Post 3"
+            />
+          </div>
+          <div class="post-item">
+            <img
+              src="https://4geeksacademy.com/static/d1ae61b5a52617080608d4df75d23298/1a949/ownpeoplecoding2.webp"
+              alt="Post 4"
+            />
+          </div>
+          <div class="post-item">
+            <img
+              src="https://diferenciaentre.es/wp-content/uploads/2023/09/4geeks-academy.jpg"
+              alt="Post 5"
+            />
+          </div>
+          <div class="post-item">
+            <img
+              src="https://4geeksacademy.com/static/b66c97ebc584296e20c5f308b780aa22/bd87f/santiago-1.png"
+              alt="Post 6"
+            />
+          </div>
+          <div class="post-item">
+            <img
+              src="https://4geeksacademy.com/static/b969776abb812ca2cea973cefcd38607/55486/madrid-2.png"
+              alt="Post 7"
+            />
+          </div>
+          <div class="post-item">
+            <img
+              src="https://4geeksacademy.com/static/226a133744b2d276938fea83d5318dcf/2b424/madrid-1.jpg"
+              alt="Post 8"
+            />
+          </div>
+          <div class="post-item">
+            <img
+              src="https://www.empoderamia.com/wp-content/uploads/2025/02/Captura-de-pantalla-2025-02-28-183322.png"
+              alt="Post 9"
+            />
+          </div>
+        </div>
+      </div>
+
+      <!-- List View -->
+      <div class="tab-pane fade" id="list">
+        <div class="row justify-content-center">
+          <div class="col-4">
+            <div class="post-card">
+              <div class="post-header">
+                <strong>Los Graduados</strong>
+              </div>
+              <img
+                src="https://4geeksacademy.com/images/4geeks-main.jpg"
+                alt="Post"
+                class="post-image"
+              />
+              <div class="post-actions">
+                <i class="far fa-heart"></i>
+                <i class="far fa-comment"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-bookmark float-end"></i>
+              </div>
+              <div class="post-likes">234 likes</div>
+              <div class="post-caption">
+                <span class="username">JWA</span>
+                Aqui con los graduados del pt-65! #4geeks #photography
+              </div>
+              <div class="post-date">1 Year ago</div>
+            </div>
+
+            <div class="post-card">
+              <div class="post-header">
+                <strong>Graduacion de los Profes!</strong>
+              </div>
+              <img
+                src="https://storage.googleapis.com/media-breathecode/ea4fd897823186161355bdfce8b2d4f443a1effdc17d84c7b00c14e3de85c5aa"
+                alt="Post"
+                class="post-image"
+              />
+              <div class="post-actions">
+                <i class="far fa-heart"></i>
+                <i class="far fa-comment"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-bookmark float-end"></i>
+              </div>
+              <div class="post-likes">999999 likes</div>
+              <div class="post-caption">
+                <span class="username">JWA</span>
+                Cuando tus profes se graduan! 😂 #4geeks #Jose #Bryan
+              </div>
+              <div class="post-date">5 hours ago</div>
+            </div>
+
+            <div class="post-card">
+              <div class="post-header">
+                <strong>Clase con Covid</strong>
+              </div>
+              <img
+                src="https://4geeksacademy.com/static/e87935aadbb3844e3734315214b5f032/f6992/madrid-3.png"
+                alt="Post"
+                class="post-image"
+              />
+              <div class="post-actions">
+                <i class="far fa-heart"></i>
+                <i class="far fa-comment"></i>
+                <i class="far fa-paper-plane"></i>
+                <i class="far fa-bookmark float-end"></i>
+              </div>
+              <div class="post-likes">567 likes</div>
+              <div class="post-caption">
+                <span class="username">JWA</span>
+                Aprendiendo, la pandemia no nos detiene! #4geeks #covid
+                #BryanMonitor
+              </div>
+              <div class="post-date">5 years ago</div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Create Post Modal -->
+    <div class="modal fade" id="createModal">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title">Create New Post</h5>
+            <button
+              type="button"
+              class="btn-close"
+              data-bs-dismiss="modal"
+            ></button>
+          </div>
+          <div class="modal-body">
+            <div>
+              <label class="form-label">Caption</label>
+              <textarea
+                class="form-control"
+                rows="3"
+                placeholder="Add the caption your post here"
+              ></textarea>
+            </div>
+          </div>
+          <div class="modal-footer">
+            <button
+              type="button"
+              class="btn btn-secondary"
+              data-bs-dismiss="modal"
+            >
+              Close
+            </button>
+            <button type="button" class="btn btn-primary">Publish</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+  </body>
+</html>
